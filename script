@@ -21,3 +21,5 @@ ko_list: /scratch1/kar131/4.Magpie_goose/KOFAMSCAN/ko_list
 #You can run KOFAMSCAN
 
 exec_annotation -o mg_kegg.txt --cpu 22 -E 0.00000000001 -f mapper --tmp-dir $TMPDIR GCA_013399115.1_ASM1339911v1_protein.faa
+
+#Then you can go to the "KEGG Mapper" page and upload the "mg_kegg.txt" to see the proteins and thier realted pathways
