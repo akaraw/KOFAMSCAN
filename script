@@ -1,0 +1,9 @@
+#Go to this address https://www.genome.jp/tools/kofamkoala/
+#and then go to: https://www.genome.jp/ftp/db/kofam/
+wget https://www.genome.jp/ftp/db/kofam/ko_list.gz
+wget https://www.genome.jp/ftp/db/kofam/profiles.tar.gz
+tar xvzf profiles.tar.gz
+gunzip ko_list.gz
+
+#Then install kofamscan from conda
+mamba create -n kofamscan -c bioconda kofamscan 
