@@ -7,3 +7,17 @@ gunzip ko_list.gz
 
 #Then install kofamscan from conda
 mamba create -n kofamscan -c bioconda kofamscan 
+
+which exec_annotation
+> /scratch1/kar131/mambaforge/envs/kofamscan/bin/exec_annotation
+vi /scratch1/kar131/mambaforge/envs/kofamscan/bin/config.yml
+
+'''
+profile: /scratch1/kar131/4.Magpie_goose/KOFAMSCAN/profiles
+ko_list: /scratch1/kar131/4.Magpie_goose/KOFAMSCAN/ko_list
+'''
+
+#Now the installation is complete
+#You can run KOFAMSCAN
+
+exec_annotation -o mg_kegg.txt --cpu 22 -E 0.00000000001 -f mapper --tmp-dir $TMPDIR GCA_013399115.1_ASM1339911v1_protein.faa
